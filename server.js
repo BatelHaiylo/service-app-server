@@ -12,12 +12,6 @@ app.use(morgan("dev"));
 app.use(cors());
 app.use(helmet());
 
-app.use("/lawyer", require("./routes/lawyerRouter"));
-app.use("/category", require("./routes/categoryRouter"));
-app.use("/review", require("./routes/reviewRouter"));
-app.use("/user", require("./routes/userRouter"));
-app.use("/emailHandler", require("./routes/emailRouter"));
-
 app.get("/", (req, res) => {
   res.send("server online "); 
 });
